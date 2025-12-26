@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fazil Events | Cloud Internship Project</title>
+    <style>
+        :root {
+            --primary-color: #4a90e2;
+            --secondary-color: #2c3e50;
+            --accent-color: #f39c12;
+            --light-bg: #f4f7f6;
+            --text-muted: #666;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background-color: var(--light-bg);
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--secondary-color);
+            color: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 { font-size: 3rem; }
+
+        .container {
+            padding: 60px 5%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--secondary-color);
+            font-size: 2rem;
+        }
+
+        .event-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: 0.3s;
+            border: 1px solid #eee;
+        }
+
+        .card:hover { 
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .card-content { padding: 25px; }
+        
+        .date-tag {
+            display: inline-block;
+            background: rgba(74, 144, 226, 0.1);
+            color: var(--primary-color);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .event-meta {
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+            font-size: 0.85rem;
+            color: #888;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: var(--secondary-color);
+            color: white;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h2>Fazil Events</h2>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#events">Upcoming Events</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Event Catalogue</h1>
+        <p>Explore our schedule of upcoming sessions and festivals.</p>
+    </section>
+
+    <div class="container" id="events">
+        <h2 class="section-title">Event Details</h2>
+        
+        <div class="event-grid">
+    <div class="card">
+        <div class="card-content">
+            <span class="date-tag">FEB 15, 2025</span>
+            <h3>Chennai Tech Connect 2025</h3>
+            <p>
+                A one-day technology meetup focusing on web development,
+                cloud computing, and AI trends for students and freshers.
+            </p>
+            <div class="event-meta">
+                <div class="meta-item">📍 <strong>Location:</strong> T Nagar Community Hall, Chennai</div>
+                <div class="meta-item">⏰ <strong>Time:</strong> 9:30 AM – 4:30 PM</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-content">
+            <span class="date-tag">APR 06, 2025</span>
+            <h3>South India Cultural Fest</h3>
+            <p>
+                A vibrant cultural festival showcasing traditional music,
+                dance performances, food stalls, and local artisans.
+            </p>
+            <div class="event-meta">
+                <div class="meta-item">📍 <strong>Location:</strong> Island Grounds, Chennai</div>
+                <div class="meta-item">⏰ <strong>Time:</strong> 4:00 PM – 10:00 PM</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-content">
+            <span class="date-tag">JUL 20, 2025</span>
+            <h3>Startup & Innovation Expo</h3>
+            <p>
+                An expo connecting aspiring entrepreneurs, startups,
+                and investors with panel discussions and demo sessions.
+            </p>
+            <div class="event-meta">
+                <div class="meta-item">📍 <strong>Location:</strong> Codissia Trade Centre, Coimbatore</div>
+                <div class="meta-item">⏰ <strong>Time:</strong> 10:00 AM – 6:00 PM</div>
+            </div>
+        </div>
+    </div>
+</div>
